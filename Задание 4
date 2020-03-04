@@ -1,0 +1,19 @@
+#include <iostream>
+#include <math.h>
+using namespace std;    
+
+int main ()
+{
+    float a,b,c;
+    cout<<"Enter a -->";
+    cin>>a;
+    cout<<"Enter b -->";
+    cin>>b;
+    c=a;
+    a=b;
+    b=c;
+    cout<<"-------------\n";
+    cout<<"a -->"<<a<<'\t';
+    cout<<"b -->"<<b<<endl;
+    cout<<"-------------\n";
+}

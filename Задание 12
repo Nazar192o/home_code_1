@@ -1,0 +1,24 @@
+#include <iostream>
+#include <math.h>
+using namespace std;    
+
+int main ()
+{ 
+    int a,b;
+    float res1,ost;
+    cout<<"Enter 2 integer nambers -->";
+    cin>>a>>b;
+    ost= a%b;
+    if(a%b==0){
+        cout<<"----------\n";
+        cout<<"delitsya"<<endl;
+    }
+    else{
+        cout<<"----------\n";
+        cout<<"Ne delitsya"<<endl;
+        cout<<"Ostatok="<<ost<<endl;
+    }
+    res1=a/b;
+    cout<<"...........\n";
+    cout<<"chastnoe= "<<res1;
+}

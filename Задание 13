@@ -1,0 +1,25 @@
+#include <iostream>
+#include <math.h>
+using namespace std;    
+
+int main ()
+{ 
+    char c;
+    float cena1,cena2,pokupka,pokupka2;
+    cout<<"vvedite razdel --> "; //У задания есть разел а и б, в начале программа просит ввести именно его.
+    cin>>c;
+    cout<<"cena1 --> ";
+    cin>>cena1;
+    cout<<"cena2 -->";
+    cin>>cena2;
+    if(c==97)
+    {
+        pokupka=0.3*cena1+0.4*cena2;
+        cout<<"Summa pokupki =" <<pokupka;
+    }
+    if(c==98)
+    {
+        pokupka2=3*(2*cena1+1.8*cena2);
+        cout<<"Summa treh pokupok ="<<pokupka2;
+    }
+}

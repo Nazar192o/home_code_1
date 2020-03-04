@@ -1,0 +1,17 @@
+#include <iostream>
+#include <math.h>
+using namespace std;    
+
+int main ()
+{
+    float a,b,c,res1,res2;
+    cout<<"Enter 3 numbers -->";
+    cin>>a>>b>>c;
+    res1=(a+b+c)/3;
+    res2=2*(a+b)-3*b;
+    cout<<"----------\n";
+    cout<<"sr.znach="<<res1<<endl;
+    cout<<"..........\n";
+    cout<<"raznost'="<<res2<<endl;
+    cout<<"----------\n";
+}    

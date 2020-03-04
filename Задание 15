@@ -1,0 +1,61 @@
+#include <iostream>
+#include <math.h>
+using namespace std;
+
+int main ()
+{
+    float a,b,c,res1,res2,res3,res4;
+    cout<<"summa - 1\n";
+    cout<<"raznost' - 2\n";
+    cout<<"proisvedenie - 3\n";
+    cout<<"chastnoe - 4\n";
+    cout<<"Vibirete deystvie -->";
+    cin>>c;
+    if(c>4)
+    {
+        cout<<"Net takogo deysviya";
+        return 0;
+    }
+    else
+    {
+        cout<<"vvedite dannie -->";
+        cin>>a>>b;
+        if(c==1)
+        {
+            res1=a+b;
+            cout<<"----------\n";
+            cout<<"Otwet= " <<res1<<endl;
+            cout<<"----------\n";
+        }
+        if(c==2)
+        {
+            res2=a-b;
+            cout<<"----------\n";
+            cout<<"Otwet= " <<res2<<endl;
+            cout<<"----------\n";
+        }
+        if(c==3)
+        {
+            res3=a*b;
+            cout<<"----------\n";
+            cout<<"Otwet= " <<res3<<endl;
+            cout<<"----------\n";
+        }
+        if(c==4)
+        {
+            if(b<0|b>0)
+            {
+                res4=a/b;
+                cout<<"----------\n";
+                cout<<"Otwet= " <<res4<<endl;
+                cout<<"----------\n";
+            }
+            else
+            {
+                cout<<"----------\n";
+                cout<<"Na 0 delit' nel'zy'"<<endl;
+                cout<<"----------\n";
+            }
+        }
+    }
+}

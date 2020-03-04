@@ -1,0 +1,14 @@
+#include <iostream>
+#include <math.h>
+using namespace std;    
+
+int main ()
+{
+    float x,a;
+    cout<<"Enter x -->";
+    cin>>x;
+    a=(pow(M_E,x-2))+fabs(sin(x))-pow(x,4)*cos(1/x);
+    cout<<"-----\n";
+    cout<<a<<endl;
+    cout<<"-----\n";
+}    

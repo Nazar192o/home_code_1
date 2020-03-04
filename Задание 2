@@ -1,0 +1,19 @@
+#include <iostream>
+#include <math.h>
+using namespace std;    
+
+int main ()
+{
+    //Площадь Салинона
+        float r1,r2;
+        float S,P; //Площадь,Периметр.
+
+        cout<<"Enter r1  -->";
+              cin>>r1;
+        cout<<"Enter r2  -->";
+              cin>>r2;
+        S=(M_PI*(r1+r2)*(r1+r2))/4;  //Площадь
+        cout<<"----------\n";
+        cout<<" S="<<S<<endl;
+        cout<<"----------\n";
+}

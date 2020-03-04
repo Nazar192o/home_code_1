@@ -1,0 +1,26 @@
+#include <iostream>
+#include <math.h>
+using namespace std;    
+
+int main ()
+{
+    float a,b,resolt1,resolt2;
+    cout<<"Enter a --> ";
+    cin>>a;
+    cout<<"Enter b --> ";
+    cin>>b;
+    if (b==0)
+    {
+        cout<<"----------\n";
+        cout<<"Na 0 delit' nel'zy'"<<endl;
+        cout<<"----------\n";
+    }
+    else
+    {
+        resolt1=a-b;
+        resolt2=a/b;
+        cout<<"----------\n";
+        cout<<"rasnost'= "<<resolt1<<endl;
+        cout<<"chastnoe= "<<resolt2<<endl;
+        cout<<"----------\n";
+    }

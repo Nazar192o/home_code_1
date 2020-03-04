@@ -1,0 +1,17 @@
+#include <iostream>
+#include <math.h>
+using namespace std;    
+
+int main ()
+{
+    float a,res1,res2;
+    cout<<"Enter namber -->";
+    cin>>a;
+    res1=a*a;
+    res2=a*a*a;
+    cout<<"----------\n";
+    cout<<"cwadrat= "<<res1<<endl;
+    cout<<"..........\n";
+    cout<<"cub= "<<res2<<endl;
+    cout<<"----------\n";
+}    

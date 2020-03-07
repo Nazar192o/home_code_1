@@ -1,0 +1,72 @@
+#include <iostream>
+#include <math.h>
+using namespace std;
+
+int main()
+{
+    float a,c;
+    int b;
+    cout<<"Enter number -->";
+    cin>>a;
+    cout<<"___Select translations direction:___\n";
+    for (int i=0;i<2;i++)
+    {
+        cout<<"1.bit"<<"\t2.byte"<<"\t3.Kbyte"<<"\t4.Mbyte"<<endl;
+    }
+    cin>>b;
+    switch (b)
+    {
+    //1
+    case 12:
+        c=a/8;
+        cout<<"Answer= "<<c<<" byte";
+        break;
+    case 13:
+        c=a/(8*pow(2,10));
+        cout<<"Answer= "<<c<<" Kbyte";
+        break;
+    case 14:
+        c=a/(8*pow(2,20));
+        cout<<"Answer= "<<c<<" Mbyte";
+        break;
+    //2
+    case 21:
+        c=a*8;
+        cout<<"Answer= "<<c<<" bit";
+        break;
+    case 23:
+        c=a/(pow(2,10));
+        cout<<"Answer= "<<c<<" Kbyte";
+        break;
+    case 24:
+        c=a/(pow(2,20));
+        cout<<"Answer= "<<c<<" Mbyte";
+        break;
+    //3
+    case 31:
+        c=a*pow(2,20)*8;
+        cout<<"Answer= "<<c<<" bit";
+        break;
+    case 32:
+        c=a*pow(2,10);
+        cout<<"Answer= "<<c<<" byte";
+        break;
+    case 34:
+        c=a/(pow(2,10));
+        cout<<"Answer= "<<c<<" Mbyte";
+        break;
+    //4
+    case 41:
+        c=a*pow(2,20)*8;
+        cout<<"Answer= "<<c<<" bit";
+        break;
+    case 42:
+        c=a*pow(2,20);
+        cout<<"Answer= "<<c<<" byte";
+        break;
+    case 43:
+        c=a*pow(2,10);
+        cout<<"Answer= "<<c<<" Kbyte";
+        break;
+    }
+}   

@@ -27,85 +27,16 @@ using namespace std;
     число)всех их превосходит сортировка выбором, но уступает по скорости даже пузырям
     (хотя и немного).
 **/
-
+void selectionSort(float arr[], int len,int schet_select);
+void bubbleSort(float arr[], int len,int schet_bubble);
+void insertionSort(float arr[], int len, int schet_insert);
 int schet_bubble,schet_insert,schet_select=0;
 int n =10;
 int m=5;
-
-void insertionSort(float arr[], int len, int schet_insert) {
-    float key = 0;
-    int j = 0;
-    // проход по массиву
-    for(int i = 1; i<len; i++)
-    {
-        key = arr[i];  // ключевой/текущий элемент
-        j = i - 1;
-        // перестановка элемента на нужное место
-        while(j >= 0 && arr[j] > key)
-        {
-            arr[j+1] = arr[j];
-            j = j-1;
-            arr[j+1] = key;
-            schet_insert++;
-        }
-    }
-    cout << endl << "---------------------  ";
-    cout<<endl;
-    cout<<"Dlina massiva-->"<<"\t        |"<<n<<endl;
-    cout<<"Kolichestvo perestanovok insert"<<" |"<<schet_insert;
-}
-void bubbleSort(float arr[], int len,int schet_bubble) {
-    float tmp = 0;
-    // идём по массиву
-    for(int i = 0; i<len; i++)
-    {
-        // делаем проверки в оставшейся части массива
-
-        for(int j = len-1; j >= i+1; j--)
-        {
-            if(arr[j] < arr[j-1])
-            {  // сравниваем соседние элементы
-                // делаем перестановку
-                tmp = arr[j];
-                arr[j] =arr[j-1];
-                arr[j-1] = tmp;
-                schet_bubble++;
-            }
-        }
-
-    }
-     cout << endl << "---------------------------------  ";
-     cout<<endl;
-     cout<<"Dlina massiva-->"<<"\t        |"<<n<<endl;
-     cout<<"Kolichestvo perestanovok bubble"<<" |"<<schet_bubble;
-}
-void selectionSort(float arr[], int len,int schet_select) {
-    int j = 0;
-    float tmp = 0;
-    for(int i=0; i<len; i++){
-        // ищем номер наименьшего элемента среди элементов от i-го до конца
-        j = i;
-        for(int k = i; k < len; k++)
-        {
-            if(arr[j] > arr[k])
-            {
-                j = k;
-            }
-        }
-        // меняем местами наибольший элемент и текущий
-        tmp = arr[i];
-        arr[i] = arr[j];
-        arr[j] = tmp;
-        schet_insert++;
-    }
-    cout << endl << "---------------------  ";
-    cout<<endl;
-    cout<<"Dlina massiva-->"<<"\t        |"<<n<<endl;
-    cout<<"Kolichestvo perestanovok select"<<" |"<<schet_insert;
-}
-
 int main(){
     int frog;//лучше в голову ничего не пришло)
+    fstream f;
+    f.open("name.txt", ios::out);
     cout << "************Tablitsa**************" << endl;
     cout<<"Enter nember 1,2 or 3-->";
     cin>>frog;
@@ -142,4 +73,98 @@ int main(){
         cout<<endl;
         n=n*10;
     }
+    f.close();
 }
+
+void insertionSort(float arr[], int len, int schet_insert) {
+    float key = 0;
+    int j = 0;
+    fstream f;
+    f.open("name.txt", ios::out);
+    // проход по массиву
+    for(int i = 1; i<len; i++)
+    {
+        key = arr[i];  // ключевой/текущий элемент
+        j = i - 1;
+        // перестановка элемента на нужное место
+        while(j >= 0 && arr[j] > key)
+        {
+            arr[j+1] = arr[j];
+            j = j-1;
+            arr[j+1] = key;
+            schet_insert++;
+        }
+    }
+    cout << endl << "---------------------  ";
+    cout<<endl;
+    cout<<"Dlina massiva-->"<<"\t        |"<<n<<endl;
+    cout<<"Kolichestvo perestanovok insert"<<" |"<<schet_insert;
+    f << endl << "---------------------  ";
+    f<<endl;
+    f<<"Dlina massiva-->"<<"\t        |"<<n<<endl;
+    f<<"Kolichestvo perestanovok insert"<<" |"<<schet_insert;
+}
+void bubbleSort(float arr[], int len,int schet_bubble) {
+    float tmp = 0;
+    fstream f;
+    f.open("name.txt", ios::out);
+    // идём по массиву
+    for(int i = 0; i<len; i++)
+    {
+        // делаем проверки в оставшейся части массива
+
+        for(int j = len-1; j >= i+1; j--)
+        {
+            if(arr[j] < arr[j-1])
+            {  // сравниваем соседние элементы
+                // делаем перестановку
+                tmp = arr[j];
+                arr[j] =arr[j-1];
+                arr[j-1] = tmp;
+                schet_bubble++;
+            }
+        }
+
+    }
+     cout << endl << "---------------------------------  ";
+     cout<<endl;
+     cout<<"Dlina massiva-->"<<"\t        |"<<n<<endl;
+     cout<<"Kolichestvo perestanovok bubble"<<" |"<<schet_bubble;
+     f << endl << "---------------------------------  ";
+     f<<endl;
+     f<<"Dlina massiva-->"<<"\t        |"<<n<<endl;
+     f<<"Kolichestvo perestanovok bubble"<<" |"<<schet_bubble;
+
+}
+void selectionSort(float arr[], int len,int schet_select) {
+    int j = 0;
+    float tmp = 0;
+    fstream f;
+    f.open("name.txt", ios::out);
+    for(int i=0; i<len; i++){
+        // ищем номер наименьшего элемента среди элементов от i-го до конца
+        j = i;
+        for(int k = i; k < len; k++)
+        {
+            if(arr[j] > arr[k])
+            {
+                j = k;
+            }
+        }
+        // меняем местами наибольший элемент и текущий
+        tmp = arr[i];
+        arr[i] = arr[j];
+        arr[j] = tmp;
+        schet_insert++;
+    }
+    cout << endl << "---------------------  ";
+    cout<<endl;
+    cout<<"Dlina massiva-->"<<"\t        |"<<n<<endl;
+    cout<<"Kolichestvo perestanovok select"<<" |"<<schet_insert;
+    f<< endl << "---------------------  ";
+    f<<endl;
+    f<<"Dlina massiva-->"<<"\t        |"<<n<<endl;
+    f<<"Kolichestvo perestanovok select"<<" |"<<schet_insert;
+}
+
+

@@ -1,3 +1,8 @@
+#include <iostream>
+#include <iomanip>
+#include <math.h>
+#include <cmath>
+#include <string.h>
 using namespace std;
 const int n = 4;
 const int m = 4;
@@ -29,10 +34,6 @@ void   MakeMatrix()
         cout << endl;
     }
     cout<<' ' <<endl;
-}
-
-void   SummMatrix()
-{
 
     cout<<"Second matrix:"<<endl;
     for(int r = 0; r<n; r++)//заполняем матрицу
@@ -45,6 +46,10 @@ void   SummMatrix()
             cout << mat2[r][k] << " ";
         cout << endl;
     }
+}
+
+void   SummMatrix()
+{
 
     cout<<' ' <<endl;
     //реализация сложения
@@ -85,7 +90,6 @@ void   MultiplicationMatrix()
 {
 
     cout<<' ' <<endl;
-    //реализация сложения
     cout<<"Multiplication:"<<endl;
     for(int d = 0; d<n; d++)
     {
@@ -126,40 +130,46 @@ int main()
     TranspositionMatrix();
 }
 
-
 /*********************************ВЫВОД****************************
 
+*************************************
+Fitst matrix:
+12 10 13 12
+9 1 7 5
+11 13 6 8
+1 1 9 6
+
 Second matrix:
-14 0 8 3
-8 7 5 12
-10 4 11 4
-6 10 12 3
+7 8 11 1
+8 13 8 0
+5 0 6 6
+2 5 9 1
 
 Summ:
-23 5 14 16
-13 18 9 20
-23 12 23 14
-11 14 26 6
+19 18 24 13
+17 14 15 5
+16 13 12 14
+3 6 18 7
 *************************************
 
 Subtraction:
--5 5 -2 10
--3 4 -1 -4
-3 4 1 6
--1 -6 2 0
+5 2 2 11
+1 -12 -1 5
+6 13 0 2
+-1 -4 0 5
 
 *************************************
 
 Multiplication:
-126 0 48 39
-40 77 20 96
-130 32 132 40
-30 40 168 9
+84 80 143 12
+72 13 56 0
+55 0 36 48
+2 5 81 6
 *************************************
 
 Transposition:
-9 5 13 5
-5 11 8 4
-6 4 12 14
-13 8 10 3
+12 9 11 1
+10 1 13 1
+13 7 6 9
+12 5 8 6
 *************************************

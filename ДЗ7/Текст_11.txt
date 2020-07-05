@@ -1,0 +1,7 @@
+Enter the string and finish it with point:
+
+awfwaf afwsfw fawaf.
+
+Finished String:
+
+wfwaf fwsfw awaf
